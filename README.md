@@ -6,7 +6,13 @@ The Odin Project - Intermediate JS project
 
 LIVE SITE [HERE](https://hello-damiro.github.io/weather)
 
-**Day 1:** Prepared design at figma. Focusing on the DOM elements that will use weather API. Preparing the design for future updates like unsplash API for the background images. Found an interesting library of [weather icons](https://erikflowers.github.io/weather-icons/). I could probably finished this in 1 seating if all the UI design details are in place. Was able to fetch weather data complete with error handling using promise on a separate module. Last project was very helpful in that topic.
+**Day 1:** Prepared design at figma. Focusing on the DOM elements that will use weather API. Preparing the design for future updates like unsplash API for the background images.I could probably finished this in 1 seating if all the UI design details are in place. Was able to fetch weather data complete with error handling using promise on a separate module. Last project was very helpful in that topic.
+
+</br>
+
+## Resources
+
+Im in a time constraints; if I have more time, I could've redraw all the 200+ icons used in the api. `weatherapi.com/docs/` provided the [icons used](https://cdn.weatherapi.com/weather.zip) together with the conditions from the [conditional text list](https://www.weatherapi.com/docs/weather_conditions.csv)
 
 </br>
 
