@@ -60,7 +60,7 @@ function renderDetails() {
     $('.main .details').textContent = weatherData[0].condition;
 }
 
-$('.main .icon').addEventListener('click', () => {
+$('.main .icon em').addEventListener('click', () => {
     metric = !metric;
     renderDetails();
 });

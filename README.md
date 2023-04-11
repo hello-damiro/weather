@@ -1,12 +1,12 @@
 # weather
 
-The Odin Project - Intermediate JS project
-
-## Warning! This is a work in progress
+## The Odin Project - Intermediate JS project
 
 LIVE SITE [HERE](https://hello-damiro.github.io/weather)
 
 **Day 1:** Prepared design at figma. Focusing on the DOM elements that will use weather API. Preparing the design for future updates like unsplash API for the background images.I could probably finished this in 1 seating if all the UI design details are in place. Was able to fetch weather data complete with error handling using promise on a separate module. Last project was very helpful in that topic.
+
+Hopefully I could have the time to fully finish this project. I had fun doing this. I'd like to integrate this to the todo app and be my default page for a browser. **_Completed 12 April 2023_**
 
 </br>
 

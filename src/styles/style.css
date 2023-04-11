@@ -101,7 +101,7 @@ a:hover {
     height: 64px;
 }
 
-.main .icons:hover {
+.main .icon em:hover {
     color: var(--yellow);
     cursor: pointer;
 }
