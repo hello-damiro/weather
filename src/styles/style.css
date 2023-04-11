@@ -68,21 +68,25 @@ a:hover {
 }
 
 .city {
+    margin-top: 32px;
+}
+
+.main .name {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.name {
     color: var(--yellow);
-    font-size: 1.4rem;
-    margin: 8px 0;
-}
-
-.main-city {
-    padding-bottom: 72px;
-}
-
-.main-city .city {
     font-size: 2rem;
+    font-weight: 100;
+    margin: 16px 0;
 }
 
-.city-details {
-    margin-bottom: 32px;
+.details {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
 footer {
