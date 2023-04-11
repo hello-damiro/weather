@@ -93,6 +93,11 @@ a:hover {
     font-weight: 100;
 }
 
+.main .icons:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
 .city {
     margin-top: 32px;
 }

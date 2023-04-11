@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 const apiKey = 'efb404dff353451dbe840459231104';
 const locations = ['Manila', 'Perth', 'London', 'Oslo'];
 const weatherData = [];
-const metric = false;
+let metric = false;
 
 function fetchWeather() {
     fetchWeatherDataForCities(apiKey, locations)
@@ -46,5 +46,11 @@ function renderDetails() {
     $('.main .temp').textContent = metric ? weatherData[0].temp_f : weatherData[0].temp_c;
     $('.main .icons').textContent = metric ? ' °f' : ' °c';
 }
+
+const iconButton = $('.main .icons');
+iconButton.addEventListener('click', () => {
+    metric = !metric;
+    fetchWeather();
+});
 
 fetchWeather();
