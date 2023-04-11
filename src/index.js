@@ -1,5 +1,6 @@
 import './styles/style.css';
 import { $, _$ } from './js/constants';
+import { imgUrl } from './js/helpers';
 import { fetchWeatherDataForCities } from './js/weather-api';
 import dayjs from 'dayjs';
 
@@ -37,33 +38,29 @@ function fetchWeather() {
 
 function renderDetails() {
     let cities = _$('.city');
-    for (let index = 1; index < cities.length; index++) {
-        cities[index].querySelector('.name').textContent = weatherData[index].loc;
-        cities[index].querySelector('.details').textContent = weatherData[index].condition;
-        if (metric) {
-            cities[index].querySelector('em').textContent = weatherData[index].temp_f + ' °f';
-        } else {
-            cities[index].querySelector('em').textContent = weatherData[index].temp_c + ' °c';
-        }
+    cities.forEach((city, index) => {
+        city.querySelector('.name').textContent = weatherData[index].loc;
+        if (metric)
+            city.querySelector('.details').textContent =
+                weatherData[index].condition + ' ○ ' + weatherData[index].temp_f + ' °f';
+        else
+            city.querySelector('.details').textContent =
+                weatherData[index].condition + ' ○ ' + weatherData[index].temp_c + ' °c';
 
         const icon = weatherData[index].icon.substr(-7);
         const isDay = weatherData[index].is_day ? 'day' : 'night';
-        const iconFile = './images/icons/' + isDay + '/' + icon;
-        const img = cities[index].querySelector('img');
-        img.setAttribute('src', './assets/images/icons/day/113.png');
-    }
-
-    //     if (img) img.setAttribute('src', 'assets/images/icons/day/113.png');
-    //     // city.querySelector('img').setAttribute('src', iconFile);
-    //     // city.querySelector('img').setAttribute('alt', weatherData[index].condition);
-    // });
+        const iconFile = imgUrl + 'images/icons/' + isDay + '/' + icon + '?raw=true';
+        const img = city.querySelector('img');
+        if (img) img.setAttribute('src', iconFile);
+    });
 
     $('.date').textContent = dayjs().format('DD MMM YYYY');
     $('.main .temp').textContent = metric ? weatherData[0].temp_f : weatherData[0].temp_c;
-    $('.main .icons').textContent = metric ? ' °f' : ' °c';
+    $('.main .icon em').textContent = metric ? ' °f' : ' °c';
+    $('.main .details').textContent = weatherData[0].condition;
 }
 
-$('.main .icons').addEventListener('click', () => {
+$('.main .icon').addEventListener('click', () => {
     metric = !metric;
     renderDetails();
 });
