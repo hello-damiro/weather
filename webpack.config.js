@@ -18,14 +18,14 @@ module.exports = {
         },
         port: 8080,
         open: true, // open browser
-        hot: true, // hot reload
+        hot: false, // hot reload
         liveReload: true, // live reload
         compress: true, // enable gzip compression
         historyApiFallback: true, // enable browser history fallback
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack Boilerplate', // Title that will reflect of HTML file
+            title: 'Odin Weather', // Title that will reflect of HTML file
             filename: 'index.html', // dist/index.html
             template: 'src/template.html', // src/template.html
             favicon: 'src/assets/images/favicon.png', // favicon
