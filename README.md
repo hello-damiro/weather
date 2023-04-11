@@ -14,6 +14,8 @@ Hopefully I could have the time to fully finish this project. I had fun doing th
 
 Im in a time constraints; if I have more time, I could've redraw all the 200+ icons used in the api. `weatherapi.com/docs/` provided the [icons used](https://cdn.weatherapi.com/weather.zip) together with the conditions from the [conditional text list](https://www.weatherapi.com/docs/weather_conditions.csv)
 
+I found a better looking weather [icon set](https://erikflowers.github.io/weather-icons/) that I wish I could have time to replace the one im using now. Next time maybe...
+
 </br>
 
 ## Screenshot
