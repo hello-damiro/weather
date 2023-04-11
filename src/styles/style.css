@@ -22,6 +22,7 @@
 
     /* SIZING */
     --sidebar-w: 320px;
+    --icons-w: 95px;
 }
 
 body {
@@ -49,10 +50,19 @@ a:hover {
     /* background: red; */
 }
 
+.date {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding-right: 108px;
+}
+
 .weather {
+    /* background: red; */
     position: absolute;
     top: 100px;
-    right: 120px;
+    right: 60px;
     bottom: 100px;
     color: var(--yellow-lt);
     display: flex;
@@ -61,10 +71,26 @@ a:hover {
     text-align: right;
 }
 
-.temp {
+.main {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+}
+
+.main .temp {
     font-size: 8rem;
     font-weight: 100;
     margin-right: -6px;
+}
+
+.main .icons {
+    /* background: red; */
+    width: var(--icons-w);
+    height: 200px;
+    margin-top: 16px;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 100;
 }
 
 .city {
@@ -76,11 +102,32 @@ a:hover {
     font-weight: 400;
 }
 
+.cities {
+}
+
+.cities .city {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.cities .temp {
+    /* background: blue; */
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-top: 12px;
+    text-align: left;
+    width: var(--icons-w);
+    height: 55px;
+}
+
 .name {
     color: var(--yellow);
-    font-size: 2rem;
-    font-weight: 100;
-    margin: 16px 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 12px 0;
 }
 
 .details {
